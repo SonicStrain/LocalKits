@@ -55,7 +55,7 @@ LocalKits is a suite of utility tools that run **100% inside your browser**. You
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/localkit.git
+git clone https://github.com/SonicStrain/LocalKits
 cd localkit
 
 # 2. Install dependencies
