@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply scroll-smooth; }
+  body { @apply bg-zinc-950 text-zinc-100 antialiased; }
+  * { @apply box-border; }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-zinc-900; }
+  ::-webkit-scrollbar-thumb { @apply bg-zinc-700 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-zinc-600; }
+}
+
+@layer components {
+  .glass {
+    @apply bg-zinc-900/80 backdrop-blur-sm border border-zinc-800;
+  }
+
+  .card {
+    @apply bg-zinc-900 border border-zinc-800 rounded-2xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 disabled:opacity-40 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-600 hover:bg-brand-500 active:bg-brand-700 text-white px-4 py-2.5 text-sm;
+  }
+
+  .btn-secondary {
+    @apply btn bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-900 text-zinc-100 px-4 py-2.5 text-sm;
+  }
+
+  .btn-ghost {
+    @apply btn hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 px-3 py-2 text-sm;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-600/20 hover:bg-red-600/30 text-red-400 border border-red-600/30 px-4 py-2.5 text-sm;
+  }
+
+  .input {
+    @apply bg-zinc-800 border border-zinc-700 rounded-xl px-3 py-2.5 text-sm text-zinc-100 placeholder-zinc-500
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-150 w-full;
+  }
+
+  .label {
+    @apply block text-xs font-medium text-zinc-400 mb-1.5 uppercase tracking-wide;
+  }
+
+  .dropzone-base {
+    @apply border-2 border-dashed border-zinc-700 rounded-2xl p-8 text-center cursor-pointer
+           hover:border-brand-500 hover:bg-brand-600/5 transition-all duration-200;
+  }
+
+  .dropzone-active {
+    @apply border-brand-500 bg-brand-600/10;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-violet { @apply badge bg-brand-600/20 text-brand-300; }
+  .badge-blue   { @apply badge bg-blue-600/20   text-blue-300;  }
+  .badge-emerald{ @apply badge bg-emerald-600/20 text-emerald-300; }
+  .badge-amber  { @apply badge bg-amber-600/20  text-amber-300;  }
+
+  .tab {
+    @apply px-4 py-2 rounded-xl text-sm font-medium transition-colors duration-150 cursor-pointer;
+  }
+  .tab-active   { @apply bg-brand-600 text-white; }
+  .tab-inactive { @apply text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800; }
+
+  .progress-track {
+    @apply w-full bg-zinc-800 rounded-full overflow-hidden;
+  }
+  .progress-fill {
+    @apply h-full bg-gradient-to-r from-brand-600 to-blue-500 rounded-full transition-all duration-300 ease-out;
+  }
+
+  .tool-header {
+    @apply flex items-center gap-3 mb-6;
+  }
+  .tool-icon-wrap {
+    @apply p-2.5 rounded-xl;
+  }
+}
+
+/* Print-only styles for Resume Builder */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white !important; color: black !important; }
+  .print-area { box-shadow: none !important; border: none !important; }
+}
