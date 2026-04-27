@@ -6,6 +6,7 @@
 
 <p>PDF manipulation · Image conversion · Video compression · On-device AI — all running locally in your browser.</p>
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-localkits.netlify.app-brightgreen?style=flat-square&logo=netlify&logoColor=white)](https://localkits.netlify.app)
 ![React](https://img.shields.io/badge/React-18-61dafb?style=flat-square&logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-2-646cff?style=flat-square&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-06b6d4?style=flat-square&logo=tailwindcss&logoColor=white)
